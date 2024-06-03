@@ -1,0 +1,31 @@
+.TH duzy_skrypt "30.05.2024" "2.0" "Manual"
+.SH NAME
+duzy_skrypt \- skrypt do szyfrowania plików i wysyłania ich do folderu DropBox.
+.SH DESCRIPTION
+.B duzy_skrypt
+    Skrypt pozwala użytkownikowi na wybór pliku do wysłania do folderu DropBox oraz hasła które będzie użyte do zaszyfrowania pliku.
+    Skrypt korzysta z biblioteki kryptograficznej OpenSSl, oferującej wyjątkowo silny algorytm szyfrujacy AES-256-CBC:
+    -AES-256: Oznacza, że używany jest klucz o długości 256 bitów, co zapewnia wysoki poziom bezpieczeństwa.
+    -CBC: Oznacza, że używany jest tryb łańcuchowy bloków szyfrujących. W tym trybie każdy blok tekstu jawnego jest XOR-owany z poprzednim blokiem szyfrogramu przed zaszyfrowaniem.
+    Następnie zaszyfrowany plik, przesyłany jest do folderu DropBox, za pomocą API DropBox. API wymaga aktualnego ACCESS TOKEN-u, który wygenerować można w ustawieniach swojej aplikacji DropBox.  
+.SH SYNOPSIS
+duzy_skrypt [opcje]
+.SH OPTIONS
+.TP
+.B \-h
+Pomoc
+.TP
+.B \-v
+Wersja
+.SH PRZYKŁADY
+.PP
+.B nazwa_skryptu
+\-a argument
+.SH AUTHOR
+Ryszard Pytka (s198323@student.pg.edu.pl)
+.SH BUGS
+Brak zaobserwowanych bledow.
+.SH REPORTING BUGS
+https://github.com/Riczixs
+.SH VERSION
+2.0
